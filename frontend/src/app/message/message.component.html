@@ -1,0 +1,29 @@
+<div>
+    <div class="mb-4 mx-0 sm:ml-4 xl:mr-4">
+        <div class="shadow-lg rounded-2xl p-4 bg-gray-700 w-full">
+            <p class="font-bold text-md text-white">
+                即時訊息
+            </p>
+
+            <p *ngIf="isLoading" class="my-2 text-gray-200 sm:text-lg sm:font-bold sm:text-center">
+                載入中...
+            </p>
+
+            <ul>
+                <li class="flex items-center my-6 space-x-2" *ngFor="let message of messages">
+                    <a href="#" class="block relative">
+                        <img alt="profil" src="https://secure.gravatar.com/avatar/a6b6898ed8d1c570e68b6629158f51fb?size=400px" class="mx-auto object-cover rounded-full h-10 w-10 " />
+                    </a>
+                    <div class="flex flex-col">
+                        <span class="text-sm font-semibold text-white ml-2">
+                            {{message.name}}
+                        </span>
+                        <span class="text-sm text-gray-300 ml-2">
+                            {{message.content}}
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

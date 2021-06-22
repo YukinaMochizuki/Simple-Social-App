@@ -1,0 +1,205 @@
+
+
+    <app-card *ngFor="let post of posts" [post]="post"></app-card>
+
+    <div class="mb-4" *ngIf="isLoading">
+        <div class="shadow-lg rounded-2xl p-4 bg-gray-700 w-full">
+            <p class="my-2 text-gray-200 sm:text-lg sm:font-bold sm:text-center">
+                載入中...
+            </p>
+        </div>
+    </div>
+
+    <a (click)="getPosts()" class="inline-block px-5 py-3 my-3 rounded-lg shadow-lg bg-gray-700 text-white tracking-wider font-semibold text-sm" href="#">
+        載入更多
+    </a>
+
+<!-- 
+<div class="mb-4">
+    <div class="shadow-lg rounded-2xl p-4 bg-gray-700 w-full">
+        <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center">
+                <img alt="profil" src="https://secure.gravatar.com/avatar/a6b6898ed8d1c570e68b6629158f51fb?size=400px" class="mx-auto object-cover rounded-full h-10 w-10 " />
+                <div class="flex flex-col">
+                    <span class="font-bold text-md text-gray-200 ml-2">
+                            小美
+                            </span>
+                    <span class="text-xs text-gray-300 ml-2">
+                            13 分鐘前 
+                        </span>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <button class="text-gray-200">
+                            <svg width="25" height="25" fill="currentColor" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1088 1248v192q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h192q40 0 68 28t28 68zm0-512v192q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h192q40 0 68 28t28 68zm0-512v192q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h192q40 0 68 28t28 68z">
+                                </path>
+                            </svg>
+                        </button>
+            </div>
+        </div>
+        <div class="flex items-center justify-between mb-4 space-x-12">
+            <span class="px-2 py-1 flex items-center font-semibold text-xs rounded-md text-gray-200 bg-gray-500">
+                        私人
+                </span>
+            <span class="px-2 py-1 flex items-center font-semibold text-xs rounded-md text-gray-200 bg-purple-800">
+                        社團貼文
+                </span>
+        </div>
+
+        <p class="mt-2 text-gray-200 sm:mt-4 sm:text-base">
+            Lorem ipsum dolor sit amet, et wisi decore quidam per. Ex sit corrumpit expetendis. Cetero menandri iudicabit nam ad. Ubique vidisse mea an, agam graeci argumentum mei ea. Cu autem viderer interpretaris pri, erant nusquam accumsan his ad. Dicit tation
+            cu eos, et duis veri eos.
+        </p>
+
+        <div class="flex items-center justify-start my-4 space-x-4">
+            <span class="px-2 py-1 flex items-center text-xs rounded-md font-semibold text-gray-200 bg-blue-900">
+                        Back-end
+                    </span>
+            <span class="px-2 py-1 flex items-center text-xs rounded-md font-semibold text-gray-200 bg-purple-900">
+                        UI/UX
+                </span>
+        </div>
+        <div class="flex flex-col ">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="#" class="px-2 py-1 flex mt-0 items-center text-xs font-semibold text-gray-200 hover:underline">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                            </svg> 3
+                    </a>
+                </div>
+                <a href="#" class="px-2 py-1 flex mt-0 items-center text-xs font-semibold text-gray-200 hover:underline">
+                        12 則留言
+                    </a>
+            </div>
+
+            <div class="border-b-2 border-gray-200 my-3"></div>
+
+            <div class="flex items-start">
+                <img alt="profil" src="https://secure.gravatar.com/avatar/a6b6898ed8d1c570e68b6629158f51fb?size=400px" class="object-cover rounded-full h-8 w-8" />
+                <p class="ml-5 text-sm text-gray-200">
+                    Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
+                </p>
+            </div>
+
+
+            <div class="border-b-2 border-gray-200 my-3"></div>
+
+            <div class="flex items-start">
+                <img alt="profil" src="https://secure.gravatar.com/avatar/a6b6898ed8d1c570e68b6629158f51fb?size=400px" class="object-cover rounded-full h-8 w-8" />
+                <p class="ml-5 text-sm text-gray-200">
+                    Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
+                </p>
+            </div>
+
+            <div class="border-b-2 border-gray-200 my-3"></div>
+
+            <div class="flex items-start">
+                <img alt="profil" src="https://secure.gravatar.com/avatar/a6b6898ed8d1c570e68b6629158f51fb?size=400px" class="object-cover rounded-full h-8 w-8" />
+                <p class="ml-5 text-sm text-gray-200">
+                    Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
+                </p>
+            </div>
+
+            <div class="border-b-2 border-gray-200 my-3"></div>
+
+            <div class="flex items-start">
+                <img alt="profil" src="https://secure.gravatar.com/avatar/a6b6898ed8d1c570e68b6629158f51fb?size=400px" class="object-cover rounded-full h-8 w-8" />
+                <p class="ml-5 text-sm text-gray-200">
+                    Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mb-4">
+    <div class="shadow-lg rounded-2xl p-4 bg-gray-700 w-full">
+        <div class="flex items-center justify-between mb-6">
+            <div class="flex items-center">
+                <img alt="profil" src="https://secure.gravatar.com/avatar/a6b6898ed8d1c570e68b6629158f51fb?size=400px" class="mx-auto object-cover rounded-full h-10 w-10 " />
+                <div class="flex flex-col">
+                    <span class="font-bold text-md text-gray-200 ml-2">
+                                小知
+                            </span>
+                    <span class="text-xs text-gray-300 ml-2">
+                            26 分鐘前 
+                        </span>
+                </div>
+            </div>
+            <div class="flex items-center">
+                <button class="text-gray-200">
+                            <svg width="25" height="25" fill="currentColor" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1088 1248v192q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h192q40 0 68 28t28 68zm0-512v192q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h192q40 0 68 28t28 68zm0-512v192q0 40-28 68t-68 28h-192q-40 0-68-28t-28-68v-192q0-40 28-68t68-28h192q40 0 68 28t28 68z">
+                                </path>
+                            </svg>
+                        </button>
+            </div>
+        </div>
+        <div class="flex items-center justify-between mb-4 space-x-12">
+            <span class="px-2 py-1 flex items-center font-semibold text-xs rounded-md text-gray-200 bg-gray-500">
+                        公開
+                </span>
+            <span class="px-2 py-1 flex items-center font-semibold text-xs rounded-md text-gray-200 bg-purple-800">
+                        個人塗鴉牆
+                </span>
+        </div>
+
+        <p class="mt-2 text-gray-200 sm:mt-4 sm:text-base">
+            Pro ad minim accusam adipiscing, percipit percipitur et per. Ei nec facilisis aliquando complectitur, ei blandit inimicus mea. Sit fugit legendos id. Ut sonet mentitum mei, dolorum nusquam verterem mea ad. Per agam vocibus epicurei ei, vim ad inani corpora
+            fabellas. Vitae voluptatibus signiferumque te sea, nec erat debet eleifend at.
+        </p>
+
+        <div class="flex items-center justify-start my-4 space-x-4">
+            <span class="px-2 py-1 flex items-center text-xs rounded-md font-semibold text-gray-200 bg-blue-900">
+                        IOS APP
+                    </span>
+            <span class="px-2 py-1 flex items-center text-xs rounded-md font-semibold text-gray-200 bg-purple-900">
+                        UI/UX
+                </span>
+        </div>
+        <div class="flex flex-col ">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a href="#" class="px-2 py-1 flex mt-0 items-center text-xs font-semibold text-gray-200 hover:underline">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                            </svg> 17
+                    </a>
+                </div>
+                <a href="#" class="px-2 py-1 flex mt-0 items-center text-xs font-semibold text-gray-200 hover:underline">
+                        3 則留言
+                    </a>
+            </div>
+
+            <div class="border-b-2 border-gray-200 my-3"></div>
+
+            <div class="flex items-start">
+                <img alt="profil" src="https://secure.gravatar.com/avatar/a6b6898ed8d1c570e68b6629158f51fb?size=400px" class="object-cover rounded-full h-8 w-8" />
+                <p class="ml-5 text-sm text-gray-200">
+                    Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
+                </p>
+            </div>
+
+
+            <div class="border-b-2 border-gray-200 my-3"></div>
+
+            <div class="flex items-start">
+                <img alt="profil" src="https://secure.gravatar.com/avatar/a6b6898ed8d1c570e68b6629158f51fb?size=400px" class="object-cover rounded-full h-8 w-8" />
+                <p class="ml-5 text-sm text-gray-200">
+                    Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
+                </p>
+            </div>
+
+            <div class="border-b-2 border-gray-200 my-3"></div>
+
+            <div class="flex items-start">
+                <img alt="profil" src="https://secure.gravatar.com/avatar/a6b6898ed8d1c570e68b6629158f51fb?size=400px" class="object-cover rounded-full h-8 w-8" />
+                <p class="ml-5 text-sm text-gray-200">
+                    Workcation helps you find work-friendly rentals in beautiful locations so you can enjoy some nice weather even when you're not on vacation.
+                </p>
+            </div>
+        </div>
+    </div>
+</div> -->
