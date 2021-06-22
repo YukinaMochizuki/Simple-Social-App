@@ -2,7 +2,7 @@
 My Angular and Tailwind CSS practice
 
 ## Architecture
-- api-mock: A Spring base mock server, use [JavaFaker](https://github.com/DiUS/java-faker) to generate persion's full name and post content
+- api-mock: A Spring Framework base mock server, use [JavaFaker](https://github.com/DiUS/java-faker) to generate persion's full name and post content
 - frontend: An Angular app to handle frontend
   - Service
     - PostService
