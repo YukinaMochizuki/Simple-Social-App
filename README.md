@@ -1,7 +1,7 @@
 # Simple-Social-App
 My Angular and Tailwind CSS practice
 
-## Architecture
+## Project Architecture
 - api-mock: A Spring Framework base mock server, use [JavaFaker](https://github.com/DiUS/java-faker) to generate persion's full name and post content
 - frontend: An Angular app to handle frontend
   - Service
@@ -14,7 +14,7 @@ My Angular and Tailwind CSS practice
     - cards
     - card
     - message
-- login-page: a static html to show login page 
+- login-page: A static html to show login page 
 
 ## Screenshot
 ### Login page
